@@ -11,6 +11,9 @@
 
 👉 **[Посмотреть онлайн](https://habitus-landing-page-angular.vercel.app)**
 
+## Просмотр
+<img width="1240" height="713" alt="image" src="https://github.com/user-attachments/assets/39b9c439-2bb3-4336-9895-bf30cba3524e" />
+
 ## 🎨 Дизайн
 
 **Автор:** [Olga](https://www.figma.com/@olgaaverchenko)  
