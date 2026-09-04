@@ -1,0 +1,13 @@
+<section class="section section-pricing" id="pricing">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="section-title-text">Simple, transparent pricing</h2>
+      <p class="section-title-description">Start free. Upgrade when you're ready.</p>
+    </div>
+    <div class="card-grid">
+      @for (item of pricingCards(); track item.id) {
+        <app-pricing-card [pricingCard]="item" />
+      }
+    </div>
+  </div>
+</section>

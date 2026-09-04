@@ -1,0 +1,32 @@
+<article class="pricing-card" [class.card-theme-dark]="pricingCard().cardTheme === 'dark'">
+  <div class="pricing-card-title">
+    <div class="pricing-card-status">
+      <h3>{{ pricingCard().title }}</h3>
+      @if (pricingCard().spanTitle) {
+        <span class="pricing-card-span">{{ pricingCard().spanTitle }}</span>
+      }
+    </div>
+    <p class="pricing-card-description">{{ pricingCard().description }}</p>
+  </div>
+
+  <div class="pricing-card-info">
+    <p class="pricing-card-price">{{ pricingCard().price }}</p>
+    <div class="pricing-card-item">
+      <ul class="pricing-card-ul">
+        @for (item of pricingCard().items; track item.title) {
+          <li class="pricing-card-li">
+            <img
+              [src]="item.iconSrc"
+              [alt]="item.iconAlt"
+              [width]="item.width"
+              [height]="item.height"
+              loading="lazy"
+            />
+            <p>{{ item.title }}</p>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <button class="pricing-card-action">{{ pricingCard().buttonTitle }}</button>
+</article>

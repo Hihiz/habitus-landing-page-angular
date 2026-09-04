@@ -1,0 +1,22 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  margin-top: 30px;
+  row-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 20px;
+  }
+
+  .section-title {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+  }
+}
