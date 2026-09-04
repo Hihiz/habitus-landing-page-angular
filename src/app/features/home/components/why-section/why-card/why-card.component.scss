@@ -1,0 +1,23 @@
+:host {
+  background: var(--color-light-grey-50);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 26px 36px;
+  row-gap: 10px;
+  min-height: 250px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  :host {
+    justify-content: flex-start;
+    padding-block: 46px;
+  }
+}
