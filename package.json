@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "preview": "npm run build && npx serve dist/habitus-landing-page-angular/browser -s -l 4000"
   },
   "private": true,
   "packageManager": "npm@11.13.0",
