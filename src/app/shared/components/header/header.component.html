@@ -1,0 +1,50 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a class="logo" routerLink="/" aria-label="Habitus - на главную">
+        <img src="/img/header/logo.svg" width="19" height="22" alt="Логотип сайта" />
+        <span class="logo-title">Habitus</span>
+      </a>
+    </div>
+
+    <nav class="nav-menu" aria-label="Основная навигацяи" [class.active]="isMenuOpen()">
+      <ul class="nav-list-menu">
+        @for (item of menuItems; track item.id) {
+          <li>
+            <a
+              [routerLink]="item.routerLink"
+              [fragment]="item.fragment"
+              [routerLink]="item.routerLink"
+              (click)="isMenuOpen.set(false)"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header-action">
+      <a
+        href="https://github.com/Hihiz/habitus-landing-page-angular"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="log-in-link"
+      >
+        Log in
+      </a>
+
+      <button
+        class="hamburger-button"
+        type="button"
+        [class.active]="isMenuOpen()"
+        (click)="toggleMenu()"
+        [attr.aria-label]="isMenuOpen() ? 'Закрыть меню' : 'Открыть меню'"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

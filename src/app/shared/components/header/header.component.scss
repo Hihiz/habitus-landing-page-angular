@@ -1,0 +1,150 @@
+:host {
+  background: var(--color-orange-400);
+  margin-inline: auto;
+  width: calc(100% - 40px);
+  margin-top: 36px;
+  padding-block: 16px;
+  max-width: 1380px;
+  border-radius: 24px;
+  position: sticky;
+  top: 20px;
+  left: 0;
+  z-index: 102;
+}
+
+.header {
+  position: relative;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.logo-title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.log-in-link {
+  background: white;
+  color: black;
+  padding-inline: 16px;
+  padding-block: 5px;
+  border-radius: 18px;
+  font-weight: bold;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.hamburger-button {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition:
+    backgound 0.3s ease,
+    color 0.3s ease;
+}
+
+.hamburger-button span {
+  width: 24px;
+  height: 2px;
+  background: white;
+}
+
+.hamburger-button.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  background: var(--color-orange-400);
+  color: white;
+  border-radius: 0 0 24px 24px;
+  padding-block: 20px;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+.nav-list-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .log-in-link:hover {
+    background: var(--color-grey-700);
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    width: calc(100% - 20px);
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    display: block;
+    padding-block: 0;
+    width: auto;
+  }
+
+  .nav-list-menu {
+    flex-direction: row;
+    column-gap: 20px;
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  :host {
+    width: calc(100% - 70px);
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+
+  .header .container {
+    padding-inline: 56px;
+  }
+}
