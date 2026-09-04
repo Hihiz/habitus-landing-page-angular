@@ -1,0 +1,29 @@
+<section class="section section-faq" id="faq">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="section-title-text">Frequently Asked Questions</h2>
+      <p class="section-title-description">Everything you need to know before getting started</p>
+    </div>
+
+    <div class="faq-grid">
+      @for (item of accordionItems; track item.id; let i = $index) {
+        <div class="faq-question theme-{{ item.cardTheme }}" [class.active]="isOpen(i)">
+          <button class="faq-question-button" type="button" (click)="toggleQuestion(i)">
+            <img class="faq-question-icon" src="/img/faq/Arrow.svg" width="39" height="39" alt="" loading="lazy" />
+            <span class="faq-question-title">{{ item.title }}</span>
+          </button>
+          <div class="faq-content" [class.isOpen]="isOpen(i)">
+            <p class="faq-question-description">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    <a
+      class="faq-question-link"
+      href="https://github.com/Hihiz/habitus-landing-page-angular"
+      target="_blank"
+      rel="noopener noreferrer"
+      >View All FAQs</a
+    >
+  </div>
+</section>
