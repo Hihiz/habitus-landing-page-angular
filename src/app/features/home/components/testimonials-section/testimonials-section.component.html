@@ -1,0 +1,13 @@
+<section class="section section-testimonial">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="section-title-text">What our users say</h2>
+      <p class="section-title-description">Real stories from people who turned their goals into habits.</p>
+    </div>
+    <div class="testimonial-grid">
+      @for (card of testimonialCards(); track card.id) {
+        <app-testimonial-card [cardTestimonial]="card" />
+      }
+    </div>
+  </div>
+</section>

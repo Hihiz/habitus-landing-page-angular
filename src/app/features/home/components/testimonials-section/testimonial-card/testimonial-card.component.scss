@@ -1,0 +1,33 @@
+:host {
+  background: var(--color-light-grey-50);
+  border-radius: 24px;
+  display: flex;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  row-gap: 10px;
+}
+
+.testimonial-card-title {
+  display: flex;
+  column-gap: 15px;
+}
+
+.testimonial-card-info-name {
+  font-weight: bold;
+}
+
+.testimonial-card-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.testimonial-card-info-name,
+.testimonial-card-description,
+.testimonial-card-info-position {
+  font-size: 16px;
+}
