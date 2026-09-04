@@ -1,0 +1,25 @@
+<section class="section section-social-proof">
+  <div class="container">
+    <div class="social-proof-div">
+      <img
+        class="social-prof-icon-tracker"
+        src="/img/social-proof/Habit-tracker.png"
+        width="332"
+        height="493"
+        alt=""
+        loading="lazy"
+      />
+    </div>
+
+    <div class="social-proof-info">
+      <h3 class="social-proof-info-title">
+        Join thousands of users from top companies using Habitus to build better habits
+      </h3>
+      <div class="company-grid">
+        @for (item of companies; track item.id) {
+          <img [src]="item.iconSrc" [alt]="item.iconAlt" [width]="item.width" [height]="item.height" loading="lazy" />
+        }
+      </div>
+    </div>
+  </div>
+</section>
