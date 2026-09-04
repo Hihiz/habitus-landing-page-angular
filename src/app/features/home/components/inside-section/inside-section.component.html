@@ -1,0 +1,13 @@
+<section class="section section-inside">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="section-title-text">Take a Look Inside</h2>
+      <p class="section-title-description">A simple, beautiful interface built for everyday use.</p>
+    </div>
+    <div class="inside-slider-track">
+      @for (card of cards(); track card.id) {
+        <app-inside-card [card]="card"/>
+      }
+    </div>
+  </div>
+</section>
