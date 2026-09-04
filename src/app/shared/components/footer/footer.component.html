@@ -1,0 +1,93 @@
+<footer class="footer" id="privacy-policy">
+  <div class="container">
+    <div class="footer-group">
+      <div class="footer-info">
+        <a class="footer-logo-link">
+          <img src="/img/header/logo.svg" width="19" height="22" alt="" />
+          <p class="footer-title">Habitus</p>
+        </a>
+        <p class="footer-description">
+          Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.
+        </p>
+        <div class="footer-logo-social">
+          <a>
+            <img src="/img/footer/logo1.svg" width="21" height="21" alt="" />
+          </a>
+          <a>
+            <img src="/img/footer/logo2.svg" width="21" height="21" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-product-nav">
+        <p class="footer-product-nav-p">Product</p>
+        <ul class="footer-ul-product-nav">
+          @for (item of menuItemProducts; track item.id) {
+            <li>
+              <a [routerLink]="item.routerLink" [fragment]="item.fragment">{{ item.label }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <nav class="footer-company-nav">
+        <p class="footer-company-nav-p">Company</p>
+        <ul class="footer-ul-company-nav">
+          @for (item of menuItemCompanies; track item.id) {
+            <li>
+              <a [routerLink]="item.routerLink" [fragment]="item.fragment">{{ item.label }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <div class="footer-newsletter">
+        <p class="footer-newsletter-p">Newsletter</p>
+        <p class="footer-newsletter-description">Get tips & updates in your inbox</p>
+        <form class="subscribe-form" (submit)="onSubscribe($event)">
+          <label for="subscribe-email" class="visually-hidden">Email для подписки</label>
+          <input
+            placeholder="Enter your email"
+            class="subscribe-input-email"
+            type="email"
+            required
+            id="subscribe-email"
+            name="email"
+          />
+          <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <hr class="footer-hr" />
+
+        <div class="footer-atr">
+          <p>
+            Design by
+            <a href="https://www.figma.com/@olgaaverchenko" target="_blank" rel="noopener noreferrer"> Olga </a>
+          </p>
+          <span>|</span>
+          <p>
+            Licensed under
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer"
+              >CC BY 4.0</a
+            >
+          </p>
+          <span>|</span>
+          <p>
+            Coded by
+            <a href="https://github.com/Hihiz/" target="_blank" rel="noopener noreferrer"> Hihiz </a>
+          </p>
+        </div>
+
+        <hr class="footer-hr" />
+
+        <div>
+          <div class="footer-right">
+            <p class="footer-right-p">© 2026 Habitus. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
